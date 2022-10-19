@@ -5,4 +5,6 @@ Post on IMGUR with Schematics
 https://imgur.com/gallery/eJXh0af
 
 Blog entry:
+https://pangalactictech.com/kerbal-space-program-10-axis-controller/
+
 https://medwaymakers.wordpress.com/2020/01/13/kerbal-space-program-10-axis-controller-with-arduino-mega/
