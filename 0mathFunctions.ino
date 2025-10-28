@@ -89,6 +89,8 @@ int recursiveFilter(int Xn, int w, int Ypre) {
 
 // This version is based on x = y with a deadspace in the middle
 
+#define CONTROL_DEADSPACE 2000
+
 int flightMathsPostCal(int inputValue) {  // // input is expecting 10bit int from 0 to 1024
 
   // inputValue = inputValue - calibrationOffset;                              // generates int from -512 to + 512  // CAL OFFSET could be subtracted here
@@ -121,13 +123,13 @@ int flightMathsPostCal(int inputValue) {  // // input is expecting 10bit int fro
   }
 */
 
-  if (longMath >= -1000 && longMath <= 1000) {
+  if (longMath >= -CONTROL_DEADSPACE && longMath <= CONTROL_DEADSPACE) {
     longMath = 0;
   } else {
-    if (longMath > 1000){
-      longMath -= 1000;
-    } else if (longMath < -1000){
-      longMath += 1000;
+    if (longMath > CONTROL_DEADSPACE){
+      longMath -= CONTROL_DEADSPACE;
+    } else if (longMath < -CONTROL_DEADSPACE){
+      longMath += CONTROL_DEADSPACE;
     }
   }
 
