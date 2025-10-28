@@ -106,8 +106,9 @@ int flightMathsPostCal(int inputValue ) {     // // input is expecting 10bit int
 
   //~~~~~~~~~~~~~~~## Set Up Deadspace ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  if (longMath < 0) {                           // if value is less than 0
-    longMath = longMath + 2000;                   // add 1000,
+/* Imogen - October 2025, removed deadspace and test
+ if (longMath < 0) {                           // if value is less than 0
+  longMath = longMath + 2000;                   // add 1000,
     if (longMath > 0) {                            // if now it is more than 0, it equals zero/
       longMath = 0;
     }
@@ -117,7 +118,7 @@ int flightMathsPostCal(int inputValue ) {     // // input is expecting 10bit int
       longMath = 0;                              // it equals 0
     }
   }
-
+*/
 
   /*
     if (longMath > 0) {
